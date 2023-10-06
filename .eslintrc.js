@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true,
+    es2021: true,  
+    "node": 1
   },
   extends: [
     'plugin:react/recommended',
@@ -17,7 +18,9 @@ module.exports = {
   plugins: [
     'react',
   ],
-  rules: {
+  rules: {  
+    "jsx-quotes": "off",  
+    "quotes": [2, "single", { "avoidEscape": true }],
     'react/no-unescaped-entities': 0,
     'eslintreact/no-danger': 0,
     'react/jsx-max-props-per-line': 0,

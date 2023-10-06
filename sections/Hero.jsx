@@ -28,7 +28,8 @@ flex-col relative z-10"
         </motion.div>
       </div>
       <motion.div
-        variants={slideIn("right", "tween", 0.6, 1.25)}
+        variants={slideIn("right", "tween", 0.6, 1.25)}  
+        
         className="relative w-full md:mt-[20px] -mt-[12px]"
       >
         <div
