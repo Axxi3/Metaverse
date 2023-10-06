@@ -6,7 +6,8 @@ module.exports = {
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb',
+    'airbnb',  
+   'next', 'next/core-web-vitals', 'prettier'
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -18,8 +19,10 @@ module.exports = {
   plugins: [
     'react',
   ],
-  rules: {  
+  rules: {    
+    
     "jsx-quotes": "off",  
+    "quotes": [2, "double", { "avoidEscape": true }],  
     "quotes": [2, "single", { "avoidEscape": true }],
     'react/no-unescaped-entities': 0,
     'eslintreact/no-danger': 0,
@@ -36,7 +39,29 @@ module.exports = {
     'linebreak-style': 0,
     'react/state-in-constructor': 0,
     'import/prefer-default-export': 0,
-    'react/react-in-jsx-scope': 'off',
+    'react/react-in-jsx-scope': 'off',  
+     // Rules for pages/index.js
+     'react/jsx-tag-spacing': ['error', { beforeSelfClosing: 'always' }],
+     'react/jsx-indent': ['error', 2],
+     'no-trailing-spaces': 'error',
+ 
+     // Rules for components/CustomTexts.jsx
+     'import/newline-after-import': ['error', { count: 1 }],
+     'arrow-body-style': ['error', 'as-needed'],
+ 
+     // Rules for components/ExploreCard.jsx
+     'import/newline-after-import': ['error', { count: 1 }],
+     'lines-around-directive': ['error', 'always'],
+     'import/newline-after-import': ['error', { count: 1 }],
+     // Rules for components/Footer.jsx
+     'react/jsx-indent': ['error', 2],
+     'react/jsx-indent-props': ['error', 2],
+     'react/jsx-tag-spacing': ['error', { beforeSelfClosing: 'always' }],
+     'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
+     'no-trailing-spaces': 'error',
+ 
+     // Rules for components/InsightCard.jsx
+     quotes: ['error', 'single'],
     'react/jsx-props-no-spreading': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'react/function-component-definition': [
